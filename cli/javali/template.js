@@ -1,6 +1,7 @@
 const { template } = require('lodash')
 const recursive = require('recursive-readdir')
 const fs = require('fs')
+const log = require('./log')
 const path = require('path').join
 const runPath = process.cwd()
 
@@ -17,7 +18,7 @@ async function run (app) {
         try {
           fs.writeFileSync(file, compiled(metadata))
         } catch (err) {
-          console.error('erro ao salvar', err)
+          log(err, 'error')
         }
       })
     }
