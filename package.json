@@ -1,10 +1,14 @@
 {
   "name": "javali",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Create a modern JavaScript library easily using ES6 + Jest",
+  "main": "./cli/index.js",
+  "bin": {
+    "javali": "./cli/index.js"
+  },
   "scripts": {
-    "site:server": "live-server ./docs --port=7001 -q --no-browser"
+    "site:server": "live-server ./docs --port=7001 -q --no-browser",
+    "lint": "standard"
   },
   "keywords": [
     "cli",
@@ -14,19 +18,15 @@
     "es6",
     "jest"
   ],
-  "author": {
-    "name": "FloripaJS",
-    "email": "contato@floripajs.org",
-    "url": "http://floripajs.org"
-  },
+  "author": "Diogo Moretti <diogo.pearljam@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "standard": "^12.0.1"
   },
   "dependencies": {
     "chalk": "^2.4.2",
     "commander": "^2.19.0",
-    "inquirer": "^6.2.2",
     "lodash": "^4.17.11",
     "ncp": "^2.0.0",
     "recursive-readdir": "^2.2.2"

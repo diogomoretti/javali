@@ -1,30 +1,17 @@
-const chalk = require('chalk')
 const fs = require('fs')
 const path = require('path').join
 const ncp = require('ncp').ncp
 const runPath = process.cwd()
 const template = require('./template')
+const log = require('./log')
 
-const isFolderExistsSync = myDir => {
+const isFolderExistsSync = dir => {
   try {
-    fs.accessSync(myDir)
+    fs.accessSync(dir)
     return true
   } catch (e) {
     return false
   }
-}
-
-const log = (msg, type) => {
-  const prefix = chalk.hex('#fef30a').bold('🐗  Javali ')
-  let typeMessage = chalk.hex('#f5f5f5').bold(`➜ ${msg}`)
-
-  if (type === 'success') {
-    typeMessage = chalk.green.bold(`✔︎ ${msg}`)
-  } else if (type === 'error') {
-    typeMessage = chalk.red.bold(`✖ ${msg}`)
-  }
-
-  return console.log(`${prefix}${typeMessage}\n`)
 }
 
 const create = app => {
