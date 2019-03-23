@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Javali</title>
+
+  <link href="//fonts.googleapis.com/css?family=Archivo:400,600,700" rel="stylesheet">
+  <link href="//fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+  <link href="./assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+  <a href="https://github.com/floripajs/mojito" class="fork-button">View on github</a>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="header-column">
+        <h1 class="header-logo">
+          <img src="assets/img/logo.png" alt="Javali logo" />
+        </h1>
+      </div>
+      <div class="header-column header-column--menu">
+        <nav class="header-menu">
+          <ul class="header-menu-list">
+            <li>
+              <a href="#features">Features</a>
+            </li>
+            <li>
+              <a href="#get-started">Get started</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="header-main-content">
+        <h2 class="header-main-title">
+          Create a modern JavaScript library easily using ES6 + Jest
+        </h2>
+        <code>
+          npx javali my-lib
+        </code>
+      </div>
+    </div>
+
+    <span id="scroll-indicator"></span>
+  </header>
+
+  <section id="features" class="section-features">
+    <div class="section-features-content">
+      <div class="section-features-content-item">
+        <div class="section-features-column__text">
+          <h3 class="section-feature-title">
+            Simple, fast and whatever
+          </h3>
+          <p class="section-feature-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis recusandae sequi omnis exercitationem quidem consectetur eum, obcaecati distinctio reiciendis fuga praesentium tempore veniam rerum minima hic excepturi perspiciatis id eius</p>
+        </div>
+        <div class="section-features-column__image">
+          <img src="assets/img/feat-01.jpg" />
+        </div>
+      </div>
+
+      <div class="section-features-content-item">
+        <div class="section-features-column__image">
+          <img src="assets/img/feat-02.jpg" />
+        </div>
+        <div class="section-features-column__text">
+          <h3 class="section-feature-title">
+            Modern: ES6 and Jest
+          </h3>
+          <p class="section-feature-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis recusandae sequi omnis exercitationem quidem consectetur eum, obcaecati distinctio reiciendis fuga praesentium tempore veniam rerum minima hic excepturi perspiciatis id eius</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="get-started" class="section-started">
+    <div class="section-started-content">
+      <img class="get-started-image" src="assets/img/get-started.jpg" />
+
+      <h1 class="section-started-title">Get started</h1>
+
+      <h2 class="section-started-subtitle">Using npx</h2>
+      <ul class="started-steps">
+        <li>
+          <p><strong>1.</strong> Install and create your library immediately:</p>
+          <code>
+            npx javali my-lib
+          </code>
+        </li>
+        <li><strong>2.</strong> Answer the questions</li>
+        <li><strong>3.</strong> Enjoy</li>
+      </ul>
+
+      <h2 class="section-started-subtitle">Using global cli</h2>
+      <ul class="started-steps">
+        <li>
+          <p><strong>1.</strong> Install Javali globally:</p>
+          <code>
+            yarn global add javali
+          </code>
+          <span>or</span>
+          <code>
+            npm install -g javali
+          </code>
+        </li>
+        <li>
+          <p><strong>2.</strong> Create your library:</p>
+          <code>
+            javali my-lib
+          </code>
+        </li>
+        <li><strong>3.</strong> Answer the questions</li>
+        <li><strong>4.</strong> Enjoy</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>
+        Made with <img src="assets/img/heart.svg" /> by a bunch of geeks from FloripaJS
+      </p>
+      <img class="footer-image" src="assets/img/footer.png" />
+    </div>
+  </footer>
+
+  <script>
+    const scrollIndicator = document.getElementById('scroll-indicator')
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        scrollIndicator.classList.add('hide')
+
+        window.removeEventListener('scroll')
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "javali",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "site:server": "live-server ./docs --port=7001 -q --no-browser"
+  },
+  "keywords": [
+    "cli",
+    "generator",
+    "javascript",
+    "es6",
+    "jest"
+  ],
+  "author": {
+    "name": "FloripaJS",
+    "email": "contato@floripajs.org",
+    "url": "http://floripajs.org"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
