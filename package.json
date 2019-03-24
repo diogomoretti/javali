@@ -1,6 +1,6 @@
 {
   "name": "javali",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a modern JavaScript library easily using ES6 + Jest",
   "main": "./cli/index.js",
   "bin": {
