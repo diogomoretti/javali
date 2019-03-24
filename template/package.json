@@ -1,5 +1,5 @@
 {
-  "name": "{{= appName }}",
+  "name": "test",
   "version": "0.1.0",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -23,11 +23,11 @@
     "concurrently": "^4.1.0"
   },
   "scripts": {
-    "prepare": "{{= appCmd }} build",
+    "prepare": "yarn build",
     "build": "rollup -c",
     "watch": "rollup -c -w",
     "server": "live-server --port=7000 -q --no-browser",
-    "start": "concurrently \"{{= appManager }}:watch\" \"{{= appManager }}:server\"",
+    "start": "concurrently \"yarn:watch\" \"yarn:server\"",
     "test": "jest"
   },
   "files": [

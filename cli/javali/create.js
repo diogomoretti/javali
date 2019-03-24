@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path').join
+const fullPath = require('path')
 const ncp = require('ncp').ncp
 const runPath = process.cwd()
 const template = require('./template')
@@ -16,14 +17,14 @@ const isFolderExistsSync = dir => {
 
 const create = app => {
   const fullPathFolder = path(runPath, app)
-  const fullPathTemplate = path(runPath, 'template')
+  const fullPathTemplate = path(fullPath.resolve(__dirname), '../../template')
 
-  if (isFolderExistsSync(app)) {
+  if (isFolderExistsSync(fullPathFolder)) {
     log(`Folder "${app}" already exists`, 'error')
   } else {
     ncp(fullPathTemplate, fullPathFolder, err => {
       if (err) {
-        return console.error(err)
+        return log('Error while copying files', 'error')
       }
       log(`Project folder "${app}" was created =]`, 'success')
       template(app)

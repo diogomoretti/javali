@@ -4,7 +4,7 @@ const fs = require('fs')
 const log = require('./log')
 const manager = require('./manager')
 const path = require('path').join
-const runPath = process.cwd()
+const fullPath = require('path')
 
 _.templateSettings = {
   evaluate: /{{([\s\S]+?)}}/g,
@@ -13,7 +13,7 @@ _.templateSettings = {
 }
 
 async function run (app) {
-  await recursive(path(runPath, app), ['.DS_Store'], (err, files) => {
+  await recursive(path(fullPath.resolve(__dirname), '../../template'), ['.DS_Store'], (err, files) => {
     if (!err) {
       const managerType = manager()
       const cmd = (managerType === 'yarn') ? 'yarn' : 'npm run'
@@ -33,9 +33,7 @@ async function run (app) {
           log(err, 'error')
         }
       })
-      setTimeout(() => {
-        log(`To get started, run: "cd ${app} && ${cmd} start"`)
-      }, 300)
+      log(`To get started, run: "cd ${app} && ${cmd} start"`)
     }
   })
 }
