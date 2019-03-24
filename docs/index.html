@@ -5,16 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <title>Javali</title>
+  <title>Javali • Create a modern JavaScript library that uses ES6 + Jest</title>
+
+  <meta property="og:title" content="Javali">
+  <meta property="og:description" content="Create a modern JavaScript library that uses ES6 + Jest">
+  <meta property="og:image" content="https://diogomoretti.github.io/javali/assets/img/social.jpg">
+  <meta property="og:url" content="https://diogomoretti.github.io/javali">
+
+  <meta name="twitter:title" content="Javali">
+  <meta name="twitter:description" content="Create a modern JavaScript library that uses ES6 + Jest">
+  <meta name="twitter:image" content="https://diogomoretti.github.io/javali/assets/img/social.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link href="//fonts.googleapis.com/css?family=Archivo:400,600,700" rel="stylesheet">
   <link href="//fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
   <link href="./assets/css/main.css" rel="stylesheet">
 </head>
 <body>
-  <a href="https://github.com/floripajs/mojito" class="fork-button">View on github</a>
 
   <header class="header">
+    <a href="https://github.com/floripajs/mojito" class="fork-button">View on github</a>
+
     <div class="header-top">
       <div class="header-column">
         <h1 class="header-logo">
@@ -38,7 +49,7 @@
     <div class="header-main">
       <div class="header-main-content">
         <h2 class="header-main-title">
-          Create a modern JavaScript library easily using ES6 + Jest
+          Create a modern JavaScript library that uses ES6 + Jest
         </h2>
         <code>
           npx javali my-lib
@@ -129,11 +140,9 @@
   <script>
     const scrollIndicator = document.getElementById('scroll-indicator')
 
-    window.addEventListener('scroll', () => {
+    document.addEventListener('scroll', () => {
       if (window.scrollY > 20) {
         scrollIndicator.classList.add('hide')
-
-        window.removeEventListener('scroll')
       }
     })
   </script>

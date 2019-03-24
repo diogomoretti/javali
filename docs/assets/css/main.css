@@ -34,7 +34,6 @@ body {
   height: 100%;
   color: var(--text-color);
   cursor: default;
-  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -58,10 +57,12 @@ body {
 
 /* Header */
 .header {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  overflow: hidden;
   border-top: 5px solid var(--main-color);
   padding: 1em 2em 0;
 }
@@ -153,7 +154,7 @@ code {
   font-family: var(--font-code);
   font-size: 1.8rem;
   display: inline-block;
-  border: 1px solid var(--main-color);
+  border: 2px solid var(--main-color);
   padding: 1em 2em;
 }
 
@@ -262,6 +263,7 @@ code {
 /* Section: Get Started */
 .section-started {
   background: var(--main-color);
+  overflow: hidden;
 }
 
 .get-started-image {
@@ -303,6 +305,7 @@ code {
 .started-steps li {
   font-size: 1.8rem;
   margin-bottom: 1.4em;
+  line-height: 1.6;
 }
 
 .started-steps li p {
@@ -351,8 +354,90 @@ code {
 .footer-image {
   position: absolute;
   max-width: 80px;
-  top: -.5em;
+  top: -.8em;
   right: 2em;
+}
+
+/* Breakpoints */
+@media (max-width: 1200px) {
+  .header-menu {
+    padding-right: 10em;
+  }
+}
+
+@media (max-width: 800px) {
+  .fork-button {
+    display: none;
+  }
+
+  .header-menu {
+    padding-right: 0;
+  }
+
+  .section-features-content {
+    padding-bottom: 0;
+  }
+
+  .section-features-content-item {
+    flex-direction: column;
+  }
+
+  .section-features-content-item:first-child {
+    flex-direction: column-reverse;
+  }
+
+  .section-features-column__image {
+    text-align: left;
+  }
+
+  .section-features-column__image img {
+    max-width: 100%;
+  }
+
+  .section-features-column__image:before {
+    left: 0;
+  }
+
+  .section-feature-description {
+    padding-right: 1em;
+  }
+
+  .section-features-content-item:last-child .section-features-column__text {
+    text-align: left;
+  }
+
+  .section-features-content-item:last-child .section-feature-description {
+    padding-left: 0;
+    padding-right: 1em;
+  }
+}
+
+@media (max-width: 580px) {
+  .header-menu,
+  .get-started-image,
+  #scroll-indicator {
+    display: none;
+  }
+
+  .header {
+    height: 550px;
+  }
+
+  .header-logo {
+    margin-left: -5px;
+  }
+
+  .header-main-content {
+    text-align: left;
+  }
+
+  .header-main-title {
+    font-size: 3.5rem;
+  }
+
+  .section-started-content {
+    padding-top: 6em;
+  }
 }
 
 /* Animations */
