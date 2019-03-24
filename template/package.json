@@ -1,9 +1,9 @@
 {
   "name": "{{= appName }}",
   "version": "0.1.0",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "browser": "dist/index.umd.js",
+  "main": "dist/{{= appName }}.cjs.js",
+  "module": "dist/{{= appName }}.esm.js",
+  "browser": "dist/{{= appName }}.umd.js",
   "license": "MIT",
   "repository": {
     "type": "git",

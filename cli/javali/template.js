@@ -21,7 +21,7 @@ async function run (app) {
       files.forEach(file => {
         const fileContent = fs.readFileSync(file, 'utf8')
         const metadata = {
-          appName: app,
+          appName: _.kebabCase(app),
           appManager: managerType,
           appCmd: cmd
         }
