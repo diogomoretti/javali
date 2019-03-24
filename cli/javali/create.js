@@ -25,7 +25,7 @@ const create = app => {
       if (err) {
         return console.error(err)
       }
-      log(`Project folder "${app}" was created =]`)
+      log(`Project folder "${app}" was created =]`, 'success')
       template(app)
     })
   }

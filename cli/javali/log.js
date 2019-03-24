@@ -10,7 +10,7 @@ const log = (msg, type) => {
     typeMessage = chalk.red.bold(`✖ ${msg}`)
   }
 
-  return console.log(`\n${prefix}${typeMessage}\n`)
+  return console.log(`${prefix}${typeMessage}`)
 }
 
 module.exports = log

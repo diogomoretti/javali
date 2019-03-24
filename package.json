@@ -29,6 +29,7 @@
     "commander": "^2.19.0",
     "lodash": "^4.17.11",
     "ncp": "^2.0.0",
-    "recursive-readdir": "^2.2.2"
+    "recursive-readdir": "^2.2.2",
+    "shelljs": "^0.8.3"
   }
 }
