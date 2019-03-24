@@ -25,7 +25,7 @@ async function run (app) {
           appManager: managerType,
           appCmd: cmd
         }
-        let compiled = _.template(fileContent)
+        const compiled = _.template(fileContent)
 
         try {
           fs.writeFileSync(file, compiled(metadata))
