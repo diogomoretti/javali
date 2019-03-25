@@ -5,6 +5,7 @@ const log = require('./log')
 const manager = require('./manager')
 const path = require('path').join
 const runPath = process.cwd()
+const shell = require('shelljs')
 
 _.templateSettings = {
   evaluate: /{{([\s\S]+?)}}/g,
@@ -16,14 +17,15 @@ async function run (app) {
   await recursive(path(runPath, app), ['.DS_Store'], (err, files) => {
     if (!err) {
       const managerType = manager()
-      const cmd = (managerType === 'yarn') ? 'yarn' : 'npm run'
+      const cmdRun = (managerType === 'yarn') ? 'yarn' : 'npm run'
+      const cmdInstall = (managerType === 'yarn') ? 'yarn' : 'npm install'
 
       files.forEach(file => {
         const fileContent = fs.readFileSync(file, 'utf8')
         const metadata = {
           appName: _.kebabCase(app),
           appManager: managerType,
-          appCmd: cmd
+          appCmd: cmdRun
         }
         const compiled = _.template(fileContent)
 
@@ -33,7 +35,7 @@ async function run (app) {
           log(err, 'error')
         }
       })
-      log(`To get started, run: "cd ${app} && ${cmd} start"`)
+      log(`To get started, run: "cd ${app} && ${cmdInstall} && ${cmdRun} start"`)
     }
   })
 }
