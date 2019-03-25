@@ -22,12 +22,12 @@ async function run (app) {
 
       files.forEach(file => {
         const fileContent = fs.readFileSync(file, 'utf8')
+        const compiled = _.template(fileContent)
         const metadata = {
           appName: _.kebabCase(app),
           appManager: managerType,
           appCmd: cmdRun
         }
-        const compiled = _.template(fileContent)
 
         try {
           fs.writeFileSync(file, compiled(metadata))

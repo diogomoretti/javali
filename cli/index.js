@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 const program = require('commander')
-const create = require('./javali/create')
-const log = require('./javali/log')
+const create = require('./scripts/create')
+const log = require('./scripts/log')
 
 program
   .version('1.0.0')

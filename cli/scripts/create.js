@@ -22,9 +22,20 @@ async function create (app) {
   if (isFolderExistsSync(fullPathFolder)) {
     log(`Folder "${app}" already exists`, 'error')
   } else {
+    const filesToRename = ['_babelrc', '_editorconfig', '_gitignore', '_npmrc']
+    const filesFinal = ['.babelrc', '.editorconfig', '.gitignore', '.npmrc']
+
     await wrench.copyDirSyncRecursive(fullPathTemplate, fullPathFolder, {
       excludeHiddenUnix: false
     })
+
+    filesToRename.map((item, index) => {
+      fs.renameSync(
+        fullPath.resolve(fullPathFolder, item),
+        fullPath.resolve(fullPathFolder, filesFinal[index])
+      )
+    })
+
     log(`Project folder "${app}" was created =]`, 'success')
     template(app)
   }
