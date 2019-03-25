@@ -26,7 +26,7 @@
     "prepare": "{{= appCmd }} build",
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "server": "live-server --port=7000 -q --no-browser",
+    "server": "live-server --port=7000 -q --open=./example",
     "start": "concurrently \"{{= appManager }}:watch\" \"{{= appManager }}:server\"",
     "test": "jest"
   },

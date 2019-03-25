@@ -1,3 +1,3 @@
 # 🐗 {{= appName }}
 
-> My awesome lib created by [Javali](https://github.com/diogomoretti/javali)
+> My awesome lib created by [Javali](https://javali.js.org)
