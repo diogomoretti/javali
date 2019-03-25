@@ -22,8 +22,8 @@ async function create (app) {
   if (isFolderExistsSync(fullPathFolder)) {
     log(`Folder "${app}" already exists`, 'error')
   } else {
-    const filesToRename = ['_babelrc', '_editorconfig', '_gitignore', '_npmrc']
-    const filesFinal = ['.babelrc', '.editorconfig', '.gitignore', '.npmrc']
+    const filesToRename = ['_babelrc', '_editorconfig', '_gitignore', '_npmrc', '_package']
+    const filesFinal = ['.babelrc', '.editorconfig', '.gitignore', '.npmrc', 'package.json']
 
     await wrench.copyDirSyncRecursive(fullPathTemplate, fullPathFolder, {
       excludeHiddenUnix: false
