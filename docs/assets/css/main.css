@@ -419,6 +419,10 @@ code {
     display: none;
   }
 
+  .fork-button {
+    display: block;
+  }
+
   .header {
     height: 550px;
   }

@@ -15,14 +15,16 @@ const isFolderExistsSync = dir => {
   }
 }
 
-const create = app => {
+async function create (app) {
   const fullPathFolder = path(runPath, app)
   const fullPathTemplate = path(fullPath.resolve(__dirname), '../../template')
 
   if (isFolderExistsSync(fullPathFolder)) {
     log(`Folder "${app}" already exists`, 'error')
   } else {
-    wrench.copyDirSyncRecursive(fullPathTemplate, fullPathFolder)
+    await wrench.copyDirSyncRecursive(fullPathTemplate, fullPathFolder, {
+      excludeHiddenUnix: false
+    })
     log(`Project folder "${app}" was created =]`, 'success')
     template(app)
   }
