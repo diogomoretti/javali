@@ -15,6 +15,7 @@
 - **Fully ES6** that compiles to UMD and CommonJS
 - **[Rollup](https://rollupjs.org/guide/en)** as bundler
 - **[Jest](https://jestjs.io/)** for tests
+- **[Live Server](https://github.com/tapio/live-server)** to test your library in browser
 
 <br>
 
