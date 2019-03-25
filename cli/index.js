@@ -3,9 +3,10 @@
 const program = require('commander')
 const create = require('./scripts/create')
 const log = require('./scripts/log')
+const { version } = require('../package.json')
 
 program
-  .version('1.0.0')
+  .version(version)
   .option('-v, --version', 'version')
   .parse(process.argv)
 
