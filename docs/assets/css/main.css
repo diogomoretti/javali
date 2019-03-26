@@ -369,6 +369,19 @@ code {
   font-size: 1.4rem;
 }
 
+.footer-content p a {
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid #333;
+  transition: border .5s ease;
+}
+
+.footer-content p a:hover {
+  color: #fff;
+  border-bottom-color: var(--main-color);
+}
+
 .footer-content p img {
   max-width: 18px;
   display: inline-block;

@@ -14,7 +14,7 @@
 - **Simple command** to create a library
 - **Fully ES6** that compiles to UMD and CommonJS
 - **[Jest](https://jestjs.io/)** for tests
-- **[Rollup](https://rollupjs.org/guide/en)** as bundler
+- **[Rollup](https://rollupjs.org)** as bundler
 - **[Live Server](https://github.com/tapio/live-server)** to run locally
 
 <br>
