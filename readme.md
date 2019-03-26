@@ -13,15 +13,15 @@
 
 - **Simple command** to create a library
 - **Fully ES6** that compiles to UMD and CommonJS
-- **[Rollup](https://rollupjs.org/guide/en)** as bundler
 - **[Jest](https://jestjs.io/)** for tests
-- **[Live Server](https://github.com/tapio/live-server)** to test your library in browser
+- **[Rollup](https://rollupjs.org/guide/en)** as bundler
+- **[Live Server](https://github.com/tapio/live-server)** to run locally
 
 <br>
 
 ## 🐗 Get started
 
-### Using NPX
+### Using `npx`
 
 **1** ⁓ Install and create your library immediately:
 
@@ -60,11 +60,12 @@ javali my-lib
 
 ## 🐗 Contributing
 
-1. `git checkout -b my-feature`
-2. `git add --all`
-3. `git commit -m "My commit message about my-feature"`
-4. `git push origin my-feature`
-5. Open a Pull Request =]
+1. Fork this repository
+2. `git checkout -b my-feature`
+3. `git add --all`
+4. `git commit -m "My commit message about my-feature"`
+5. `git push origin my-feature`
+6. Open a Pull Request =]
 
 <br>
 
