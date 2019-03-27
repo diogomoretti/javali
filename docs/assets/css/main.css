@@ -262,6 +262,8 @@ code {
 
 .section-feature-description a {
   position: relative;
+  display: inline-block;
+  white-space: nowrap;
   text-decoration: none;
   color: inherit;
   padding: 0 2px;
@@ -275,14 +277,14 @@ code {
   right: 0;
   width: 100%;
   height: 3px;
-  bottom: -2px;
+  bottom: 3px;
   background: var(--main-color);
   z-index: -1;
   transition: height .3s cubic-bezier(0.67, 0.04, 0, 1.21);
 }
 
 .section-feature-description a:hover:before  {
-  height: 115%;
+  height: 78%;
 }
 
 /* Section: Get Started */
