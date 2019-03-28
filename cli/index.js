@@ -10,8 +10,8 @@ program
   .option('-v, --version', 'version')
   .parse(process.argv)
 
-if (program.args[0]) {
-  create(program.args[0])
+if (program.args.length) {
+  create(...program.args)
 } else {
   log('Please, choose a name for your project ;)')
 }
