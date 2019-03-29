@@ -13,6 +13,7 @@
 
 - **Simple command** to create a library
 - **Fully ES6** that compiles to UMD and CommonJS
+- **Supports Typescript**
 - **[Jest](https://jestjs.io/)** for tests
 - **[Rollup](https://rollupjs.org)** as bundler
 - **[Live Server](https://github.com/tapio/live-server)** to run locally
@@ -48,6 +49,12 @@ npm install -g javali
 
 ```shell
 javali my-lib
+```
+
+Or with typescript:
+
+```shell
+javali my-lib --typescript
 ```
 
 **3** ⁓ Enjoy!
