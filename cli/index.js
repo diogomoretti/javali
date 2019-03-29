@@ -5,13 +5,20 @@ const create = require('./scripts/create')
 const log = require('./scripts/log')
 const { version } = require('../package.json')
 
+let appName
+
 program
   .version(version)
+  .arguments('<appName>')
   .option('-v, --version', 'version')
+  .option('--typescript', 'use typescript')
+  .action((_appName) => {
+    appName = _appName
+  })
   .parse(process.argv)
 
-if (program.args.length) {
-  create(...program.args)
+if (appName) {
+  create(appName, program.typescript)
 } else {
   log('Please, choose a name for your project ;)')
 }

@@ -14,7 +14,7 @@ class myLibrary {
 
   updateCounter () {
     const div = document.getElementById('counter')
-    div!.innerHTML = `${parseInt(div.innerHTML) + 1}`
+    div!.innerHTML = `${parseInt(div!.innerHTML) + 1}`
   }
 
   listenClick () {

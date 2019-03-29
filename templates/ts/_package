@@ -2,6 +2,7 @@
   "name": "{{= appName }}",
   "version": "0.1.0",
   "main": "dist/{{= appName }}.cjs.js",
+  "types": "dist/{{= appName }}.d.ts",
   "module": "dist/{{= appName }}.esm.js",
   "browser": "dist/{{= appName }}.umd.js",
   "license": "MIT",
@@ -26,13 +27,17 @@
   },
   "scripts": {
     "prepare": "{{= appCmd }} build",
-    "build": "rollup -c",
+    "build": "rollup -c && yarn build:types",
     "watch": "rollup -c -w",
     "server": "live-server --port=7000 -q --open=./example",
     "start": "concurrently \"{{= appManager }}:watch\" \"{{= appManager }}:server\"",
-    "test": "jest"
+    "test": "jest",
+    "build:types": "tsc -p tsconfig.app.json --emitDeclarationOnly"
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "typescript": "^3.3.4000"
+  }
 }
