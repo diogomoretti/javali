@@ -15,9 +15,12 @@ const isFolderExistsSync = dir => {
   }
 }
 
-async function create (app) {
+async function create (app, ts) {
   const fullPathFolder = path(runPath, app)
-  const fullPathTemplate = path(fullPath.resolve(__dirname), '../../template')
+  const fullPathTemplate = path(
+    fullPath.resolve(__dirname),
+    `../../templates/${ts ? 'ts' : 'js'}`
+  )
 
   if (isFolderExistsSync(fullPathFolder)) {
     log(`Folder "${app}" already exists`, 'error')
