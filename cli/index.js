@@ -11,7 +11,7 @@ program
   .version(version)
   .arguments('<appName>')
   .option('-v, --version', 'version')
-  .option('--typescript', 'use typescript')
+  .option('-t, --typescript', 'use typescript')
   .action((_appName) => {
     appName = _appName
   })
