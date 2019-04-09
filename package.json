@@ -8,7 +8,13 @@
   },
   "scripts": {
     "site:server": "live-server ./docs --port=7001 -q --no-browser",
-    "lint": "standard"
+    "lint": "standard",
+    "test": "jest"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/templates/"
+    ]
   },
   "keywords": [
     "cli",
@@ -31,7 +37,9 @@
   "author": "Diogo Moretti <diogo.pearljam@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "jest": "^24.7.1",
     "live-server": "^1.2.1",
+    "rimraf": "^2.6.3",
     "standard": "^12.0.1"
   },
   "dependencies": {
