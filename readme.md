@@ -51,7 +51,7 @@ npm install -g javali
 javali my-lib
 ```
 
-Or with typescript:
+Or using typescript:
 
 ```shell
 javali my-lib --typescript
