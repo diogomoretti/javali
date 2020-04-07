@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - 7
+install:
+  - 'yarn install --pure-lockfile'
 script:
   - 'yarn lint'
   - 'yarn test'
