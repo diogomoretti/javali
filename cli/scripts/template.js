@@ -5,7 +5,6 @@ const log = require('./log')
 const manager = require('./manager')
 const path = require('path').join
 const runPath = process.cwd()
-const shell = require('shelljs')
 
 _.templateSettings = {
   evaluate: /{{([\s\S]+?)}}/g,

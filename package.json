@@ -30,8 +30,9 @@
   },
   "standard": {
     "ignore": [
-      "/template/",
-      "/docs/"
+      "/templates/",
+      "/docs/",
+      "/tests/"
     ]
   },
   "author": "Diogo Moretti <diogo.pearljam@gmail.com>",

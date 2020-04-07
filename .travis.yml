@@ -6,4 +6,5 @@ before_install:
 install:
   - 'yarn install --immutable'
 script:
+  - 'yarn lint'
   - 'yarn test'

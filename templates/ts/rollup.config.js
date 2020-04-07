@@ -4,15 +4,15 @@ import pkg from './package.json'
 import babel from 'rollup-plugin-babel'
 
 const plugins = [
-	resolve({
-		extensions: ['.js', '.ts']
-	}),
-	commonjs(),
-	babel({
-		exclude: 'node_modules/**',
-		extensions: ['.js', '.ts']
-	}),
-];
+  resolve({
+    extensions: ['.js', '.ts']
+  }),
+  commonjs(),
+  babel({
+    exclude: 'node_modules/**',
+    extensions: ['.js', '.ts']
+  })
+]
 
 export default [
   {
@@ -20,17 +20,17 @@ export default [
     output: {
       name: 'index',
       file: pkg.browser,
-      format: 'umd',
+      format: 'umd'
     },
-    plugins,
+    plugins
   },
   {
     input: 'src/main.ts',
     external: [],
     output: [
       { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' },
-		],
-		plugins
-  },
+      { file: pkg.module, format: 'es' }
+    ],
+    plugins
+  }
 ]

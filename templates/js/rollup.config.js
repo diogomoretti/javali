@@ -9,22 +9,22 @@ export default [
     output: {
       name: 'index',
       file: pkg.browser,
-      format: 'umd',
+      format: 'umd'
     },
     plugins: [
       resolve(),
       commonjs(),
       babel({
-        exclude: 'node_modules/**',
-      }),
-    ],
+        exclude: 'node_modules/**'
+      })
+    ]
   },
   {
     input: 'src/main.js',
     external: [],
     output: [
       { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' },
-    ],
-  },
+      { file: pkg.module, format: 'es' }
+    ]
+  }
 ]

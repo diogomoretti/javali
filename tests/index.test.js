@@ -35,12 +35,14 @@ afterAll(() => {
 function cli (args, cwd) {
   return new Promise(resolve => {
     exec(`node ${path.resolve('./cli/index')} ${args}`,
-    { cwd },
-    (error, stdout, stderr) => {resolve({
-      code: error && error.code ? error.code : 0,
-      error,
-      stdout,
-      stderr
-    })
+      { cwd },
+      (error, stdout, stderr) => {
+        resolve({
+          code: error && error.code ? error.code : 0,
+          error,
+          stdout,
+          stderr
+        })
+      })
   })
-})}
+}
