@@ -1,6 +1,8 @@
 language: node_js
 node_js:
-  - 7
+  - 'stable'
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
 install:
   - 'yarn install --immutable'
 script:
