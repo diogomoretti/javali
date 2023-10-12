@@ -1,7 +1,7 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/2853428/54870888-3b2b5800-4d8b-11e9-8e3d-f56fd7692117.png" alt="Javali" width="430">
 <p align="center">
-  <a href="https://travis-ci.org/diogomoretti/javali/builds"><img alt="Travis (.org)" src="https://img.shields.io/travis/diogomoretti/javali.svg?style=flat-square"></a> <a href="https://www.npmjs.com/package/javali"><img alt="NPM" src="https://img.shields.io/npm/v/javali.svg?style=flat-square"></a> <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square" alt="JavaScript Style Guide" /></a>
+  <a href="https://www.npmjs.com/package/javali"><img alt="NPM" src="https://img.shields.io/npm/v/javali.svg?style=flat-square"></a> <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square" alt="JavaScript Style Guide" /></a>
 </p>
 <h3 align="center"><strong>⁓ <a href="https://javali.js.org">javali.js.org</a> ⁓</strong></h3>
 </p>
